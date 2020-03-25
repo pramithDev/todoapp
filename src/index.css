@@ -109,8 +109,13 @@ button.disabled,
   cursor: context-menu;
 }
 
+/*.complete.disabled{*/
+/*  display: none;*/
+/*}*/
+
 .icon.edit.disabled{
   opacity: 0.5;
+  /*display: none;*/
 }
 
 .icon.edit.disabled:hover{
