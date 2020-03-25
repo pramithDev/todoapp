@@ -1,0 +1,22 @@
+.App-wrapper{
+    background: #e3e3e1;
+    padding: 50px 80px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
+}
+
+.main-container{
+    background:rgb(214,214,214);
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 10px;
+}
+
+.container-on{
+    padding: 60px 40px;
+}
+
+@media screen and (max-width: 1023px) {
+    .App-wrapper{
+        padding: 40px 30px;
+    }
+}
