@@ -99,6 +99,25 @@ span.tools{
   width: 70%;
 }
 
+.complete.disabled:hover{
+  opacity: 1;
+  cursor: context-menu;
+}
+
+button.disabled,
+.complete.disabled{
+  cursor: context-menu;
+}
+
+.icon.edit.disabled{
+  opacity: 0.5;
+}
+
+.icon.edit.disabled:hover{
+  opacity: 0.5;
+  cursor: context-menu;
+}
+
 @media screen and (max-width: 1320px) {
   .inputSpan input{
     width: 60%;

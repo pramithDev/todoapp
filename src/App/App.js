@@ -26,6 +26,22 @@ class App extends Component {
         };
     }
 
+    // Toggle Complete
+    markComplete = id => {
+        this.setState({
+            itemList: this.state.itemList.map(item => {
+                if (id === item.id) {
+                    return {
+                        ...item,
+                        completed: !item["isCompleted"]
+                    };
+                }
+                return item;
+            })
+        });
+        console.log('Clicked');
+    };
+
     itemIdLast = 0;
 
     itemIdNew = () => {
@@ -78,6 +94,7 @@ class App extends Component {
                 {
                     name: this.state.toBeAddItem,
                     isEditing: false,
+                    completed: false,
                     id
                 },
                 ...this.state.itemList
@@ -110,6 +127,7 @@ class App extends Component {
                             removeItemAt={this.removeItemAt}
                             toggleIsEditingAt={this.toggleIsEditingAt}
                             setNameAt={this.setNameAt}
+                            markComplete = {this.markComplete}
                         />
                     </Col>
                 </Row>

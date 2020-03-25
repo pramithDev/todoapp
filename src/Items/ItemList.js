@@ -12,8 +12,10 @@ const ItemList = (props) => {
                         item={item.name}
                         isEditing={item.isEditing}
                         handleRemove={() => props.removeItemAt(item.id)}
+                        markComplete={() => props.markComplete(item.id)}
                         toggleIsEditingAt={() => props.toggleIsEditingAt(item.id)}
                         setName={text => props.setNameAt(text, item.id)}
+                        completed={item.completed}
                     />
                 ))}
             </div>

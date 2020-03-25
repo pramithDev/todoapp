@@ -15,15 +15,22 @@ const complete = {
 const Buttons = (props) => {
     return (
         <span className="tools">
-            <span className="icon complete">
-                <Button style={complete}>Complete</Button>
-            </span>
+            {props.completed ?
+                <span className="icon complete disabled" onClick={props.markComplete}>
+                    <Button style={complete} disabled >Complete</Button>
+                </span>:
+                <span className="icon complete" onClick={props.markComplete}>
+                    <Button style={complete}>Complete</Button>
+                </span>
+            }
 
             {props.isEditing ?
                 <span className="icon tick" onClick={props.toggleIsEditingAt}>
-                    <FontAwesomeIcon icon={faCheckCircle} color="#4BB543"/>
+                    <FontAwesomeIcon icon={faCheckCircle} color="#4BB543" />
                 </span>:
-                <span className="icon edit" onClick={props.toggleIsEditingAt}>
+                <span className={props.completed ? 'icon edit disabled' : 'icon edit' }
+                      onClick={ props.completed ? undefined : props.toggleIsEditingAt}
+                >
                     <FontAwesomeIcon icon={faPencilAlt}/>
                 </span>
             }

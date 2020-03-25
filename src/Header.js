@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return(
         <div className="header-wrapper">
-            <h1>TODO APP ccccc</h1>
+            <h1>TODO APP</h1>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
