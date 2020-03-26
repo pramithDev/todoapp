@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../Header';
 import AddItem from '../AddItem'
 import ItemList from '../Items/ItemList';
+import CompletedItemList from '../Items/completedItemList';
 import { Container, Row, Col } from 'reactstrap';
 
 class App extends Component {
@@ -129,6 +130,15 @@ class App extends Component {
                             setNameAt={this.setNameAt}
                             markComplete = {this.markComplete}
                         />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="6" xl="6">
+                    <CompletedItemList
+                      itemList={this.state.itemList}
+                      removeItemAt={this.removeItemAt}
+                      markComplete = {this.markComplete}
+                    />
                     </Col>
                 </Row>
               </div>
