@@ -1,0 +1,65 @@
+.App-wrapper{
+  background: #e3e3e1;
+  padding: 50px 80px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  background: url(/images/bg.jpg)no-repeat center center;
+  background-size: cover;
+  position: relative;
+  border-radius: 22px;
+}
+
+.App-wrapper:after{
+  content:"";
+  position: absolute;
+  border-radius: 22px;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+.main-container{
+  background: #D6A491;
+  min-height: 100vh;
+  position: relative;
+  padding: 65px 10px 80px;
+}
+
+.container-on{
+  padding: 60px 40px;
+}
+
+.bottom-wrapper{
+  position: relative;
+  z-index: 2;
+}
+
+.bottom-wrapper ::-webkit-input-placeholder { /* Edge */
+  color: #000;
+}
+
+.bottom-wrapper :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000;
+}
+
+.bottom-wrapper ::placeholder {
+  color: #000;
+}
+
+.bottom-wrapper h5{
+  color:#fff;
+}
+
+.bottom-wrapper input{
+  background: rgba(255,255,255,0.7);
+}
+
+@media screen and (max-width: 1023px) {
+  .App-wrapper{
+    padding: 40px 30px;
+  }
+
+  .main-container{
+    padding: 50px 0 50px;
+  }
+}
