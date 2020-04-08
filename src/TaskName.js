@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ItemName = (props) => {
+const TaskName = (props) => {
     return (
         <span className="inputSpan">
             {props.isEditing
@@ -10,7 +10,7 @@ const ItemName = (props) => {
                     type="text"
                     className="taskInput"
                     value={props.item}
-                    onChange={props.handleNameEdits}
+                    onChange={props.taskHandleNameEdits}
                 />
                 :
                 <p style={{'textDecoration': props.completed  ? 'line-through' : '' }}>{props.item}</p>
@@ -19,4 +19,4 @@ const ItemName = (props) => {
     )
 };
 
-export default ItemName;
+export default TaskName;
